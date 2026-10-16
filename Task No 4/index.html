@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A responsive registration form demonstrating JavaScript form handling and input validation." />
+  <title>FormFlow — Form Design & Validation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <aside class="intro">
+      <div class="brand"><span class="brand-icon">✦</span><span>FormFlow</span></div>
+      <div class="intro-copy">
+        <span class="eyebrow">Project 04 · JavaScript</span>
+        <h1>Form design<br>&amp; validation.</h1>
+        <p>A clean, friendly registration experience with useful feedback at every step. Enter your details to try the live validation.</p>
+        <ul class="check-list">
+          <li><span class="check">✓</span> Real-time input validation</li>
+          <li><span class="check">✓</span> Clear error and success messages</li>
+          <li><span class="check">✓</span> Responsive on mobile and desktop</li>
+        </ul>
+      </div>
+      <div class="intro-foot">Built with HTML, CSS &amp; Vanilla JavaScript</div>
+    </aside>
+
+    <section class="form-panel" aria-labelledby="formTitle">
+      <div id="formContent">
+        <header class="form-head">
+          <span class="step">Create your account</span>
+          <h2 id="formTitle">Let's get started</h2>
+          <p>Fill in the details below. We'll check your entries as you go.</p>
+        </header>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+        <form id="registerForm" novalidate>
+          <div class="field" id="nameField">
+            <label for="fullName">Full name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="e.g. Ayyan Rizwan"  />
+            <span class="error" id="nameError">Please enter your full name (at least 2 characters).</span>
+          </div>
+          <div class="field" id="emailField">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="e.g. ayyan786920@example.com"  />
+            <span class="error" id="emailError">Enter a valid email address, such as you@example.com.</span>
+          </div>
+          <div class="two-col">
+            <div class="field" id="phoneField">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" placeholder="e.g. 03XXXXXXXXX"  inputmode="tel"  />
+              <span class="error" id="phoneError">Enter a valid phone number (7–15 digits).</span>
+            </div>
+            <div class="field" id="roleField">
+              <label for="role">I'm joining as</label>
+              <select id="role" name="role" aria-describedby="roleError">
+                <option value="">Select a role</option>
+                <option value="Student">Student</option>
+                <option value="Developer">Developer</option>
+                <option value="Designer">Designer</option>
+                <option value="Other">Other</option>
+              </select>
+              <span class="error" id="roleError">Please select a role.</span>
+            </div>
+          </div>
+          <div class="field" id="passwordField">
+            <label for="password">Password</label>
+            <div class="input-wrap has-icon">
+              <input id="password" name="password" type="password" placeholder="Create a strong password" autocomplete="new-password" aria-describedby="passwordHint passwordError" />
+              <button class="show-pass" type="button" id="togglePassword" aria-label="Show password" title="Show or hide password">◉</button>
+            </div>
+            <p class="hint" id="passwordHint">Use at least 8 characters, including a letter and a number.</p>
+            <span class="error" id="passwordError">Password must be 8+ characters and contain at least one letter and one number.</span>
+          </div>
+          <div class="field" id="confirmField">
+            <label for="confirmPassword">Confirm password</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Enter your password again" autocomplete="new-password" aria-describedby="confirmError" />
+            <span class="error" id="confirmError">Passwords do not match.</span>
+          </div>
+          <div class="field" id="termsField">
+            <label class="terms" for="terms"><input id="terms" name="terms" type="checkbox" /> <span>I agree to the <a href="#terms" id="termsLink">terms and conditions</a> and confirm that my details are correct.</span></label>
+            <span class="terms-error" id="termsError">Please tick the box to continue.</span>
+          </div>
+          <button class="submit-btn" type="submit">Validate &amp; create account <span aria-hidden="true">→</span></button>
+          <p class="form-note">Demo project only — no information is sent or stored.</p>
+        </form>
+      </div>
+      <div id="successView" class="success-view" aria-live="polite">
+        <div class="success-mark">✓</div>
+        <span class="step">Validation complete</span>
+        <h2>You're all set!</h2>
+        <p id="successMessage">Your form passed all validation checks.</p>
+        <button class="reset-btn" type="button" id="editDetails">← Back to form</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.mjs" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A responsive landing page built with HTML and CSS media queries." />
+  <title>PixelCraft | Responsive Web Layout| DecodeLab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="PixelCraft home">
+        <span class="brand-mark">P</span>
+        <span>pixel<span class="brand-light">craft</span></span>
+      </a>
+
+      <!-- CSS-only mobile menu toggle -->
+      <input class="menu-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle navigation" />
+      <label class="menu-button" for="nav-toggle" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#features">Features</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+        <li><a class="nav-cta" href="#features">Explore layout <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> RESPONSIVE WEB DESIGN</p>
+        <h1>Great design.<br /><span>Every screen.</span></h1>
+        <p class="hero-copy">
+          A flexible layout that looks clean on phones, tablets, laptops, and big screens.
+          Built with simple HTML, CSS Flexbox, Grid, and media queries.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#features">Explore features <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="#about">Learn more</a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack" aria-hidden="true"><span>A</span><span>U</span><span>W</span></div>
+          <p><strong>One layout</strong><br /><span>Made for every device</span></p>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Illustration of a responsive website preview" role="img">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="preview-card">
+          <div class="preview-topbar">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <div class="preview-address"></div>
+            <span class="preview-menu">•••</span>
+          </div>
+          <div class="preview-body">
+            <div class="preview-sidebar"><span></span><span></span><span></span><span></span></div>
+            <div class="preview-main">
+              <div class="preview-heading"></div>
+              <div class="preview-subheading"></div>
+              <div class="preview-banner"><div class="banner-circle"></div><div class="banner-lines"><span></span><span></span><span></span></div></div>
+              <div class="preview-grid"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-tag tag-responsive"><span class="tag-icon">↔</span><span><strong>Fully responsive</strong><small>Mobile to desktop</small></span></div>
+        <div class="floating-tag tag-code"><span class="code-icon">{ }</span><span><strong>Clean code</strong><small>HTML + CSS</small></span></div>
+      </div>
+    </section>
+
+    <section class="feature-section" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">THE BUILDING BLOCKS</p>
+          <h2>Designed to adapt.</h2>
+          <p>Useful CSS techniques help every section find its place on any screen.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon icon-purple" aria-hidden="true">▦</div>
+            <h3>Flexible layouts</h3>
+            <p>Flexbox and CSS Grid keep content aligned and make cards rearrange naturally.</p>
+            <a href="#about" class="text-link">See how it works <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon icon-blue" aria-hidden="true">⌁</div>
+            <h3>Media queries</h3>
+            <p>Adjust spacing, columns, and navigation when the screen size changes.</p>
+            <a href="#about" class="text-link">See how it works <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon icon-orange" aria-hidden="true">✳</div>
+            <h3>Clear hierarchy</h3>
+            <p>Consistent spacing, readable text, and strong headings improve usability.</p>
+            <a href="#about" class="text-link">See how it works <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section container" id="about">
+      <div class="about-badge" aria-hidden="true"><span>100%</span><small>responsive<br />approach</small></div>
+      <div class="about-copy">
+        <p class="eyebrow">MADE FOR REAL SCREENS</p>
+        <h2>One page.<br />Many screen sizes.</h2>
+        <p>Resize your browser or open this page on a phone. The content, cards, and navigation adjust to fit the available space without horizontal scrolling.</p>
+        <div class="check-list"><p><span>✓</span> Mobile-friendly navigation</p><p><span>✓</span> Balanced spacing and alignment</p><p><span>✓</span> Responsive grid and typography</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark">P</span><span>pixel<span class="brand-light">craft</span></span></a>
+      <p>Built with HTML & CSS. Practice project for responsive design.</p>
+      <a class="back-top" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

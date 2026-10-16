@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Web Elements | Task 3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="container">
+    <div class="brand">
+      <div class="brand-mark">⚡</div>
+      <div>INTERACT LAB<small>JAVASCRIPT PROJECT · TASK 03</small></div>
+    </div>
+    <button class="theme-button" id="themeToggle" type="button" aria-pressed="false">☀️ Light mode</button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">● Learn by interacting</div>
+      <h1>Make your webpage <span>come alive.</span></h1>
+      <p>A hands-on JavaScript demo featuring click events, DOM manipulation, dynamic content, and a theme toggle. Try every interaction below.</p>
+    </section>
+
+    <section class="cards" aria-label="Interactive examples">
+      <article class="card">
+        <div class="card-top">
+          <div class="icon">🧮</div>
+          <div><h2>Click Counter</h2><p class="sub">Use JavaScript events to update a number instantly.</p></div>
+        </div>
+        <div class="counter-area">
+          <div><span class="counter-label">YOUR SCORE</span><strong id="countValue" aria-live="polite">0</strong></div>
+          <div class="counter-controls">
+            <button class="square-button" id="decreaseBtn" aria-label="Decrease score" type="button">−</button>
+            <button class="square-button" id="increaseBtn" aria-label="Increase score" type="button">+</button>
+            <button class="square-button reset" id="resetBtn" aria-label="Reset score" type="button">↻</button>
+          </div>
+        </div>
+        <p class="sub">Click + to increase, − to decrease, or ↻ to reset.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="icon">👋</div>
+          <div><h2>Personal Greeting</h2><p class="sub">Enter a name and make the page respond to you.</p></div>
+        </div>
+        <form id="greetingForm">
+          <label class="counter-label" for="nameInput">YOUR NAME</label>
+          <div class="input-row">
+            <input id="nameInput" type="text" placeholder="e.g. Ayyan" maxlength="40" autocomplete="given-name" />
+            <button class="primary-button" type="submit">Say hello ↗</button>
+          </div>
+        </form>
+        <div class="message" id="greetingMessage" aria-live="polite">Your greeting will appear here.</div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="icon">🪄</div>
+          <div><h2>Show / Hide Details</h2><p class="sub">Toggle extra information without reloading the page.</p></div>
+        </div>
+        <p class="sub">Press the button to reveal a quick explanation of DOM manipulation.</p>
+        <div class="button-row" style="margin-top:15px">
+          <button class="primary-button" id="detailsToggle" type="button" aria-expanded="false" aria-controls="detailsPanel">Show details</button>
+        </div>
+        <div class="details-panel" id="detailsPanel" aria-hidden="true">
+          <div class="details-inner"><strong>What is DOM manipulation?</strong><br />JavaScript can select HTML elements and change their text, styles, classes, or visibility. That is how a page reacts to user actions.</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <div class="icon">💬</div>
+          <div><h2>Live Text Changer</h2><p class="sub">Change the text on the page with one click.</p></div>
+        </div>
+        <div class="message" id="dynamicMessage" aria-live="polite"><strong>Ready when you are!</strong> Click the button to update this message.</div>
+        <div class="button-row" style="margin-top:14px">
+          <button class="success-button" id="changeTextBtn" type="button">Update message ✨</button>
+          <button class="secondary-button" id="restoreTextBtn" type="button">Restore</button>
+        </div>
+        <div class="status"><span class="status-dot"></span><span id="interactionStatus">Waiting for your first click</span></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="container">Built with <span>HTML · CSS · JavaScript</span> — Task 3: Interactive Web Elements</footer>
+ <script src="app.mjs"></script>
+</body>
+</html>
